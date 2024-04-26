@@ -1,1 +1,0 @@
-# Lading-Page-Academia
