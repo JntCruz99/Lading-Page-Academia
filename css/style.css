@@ -127,8 +127,9 @@ html {
 .botao button {
     width: 100%;
     background-color:  #c9f15a;
-    color: #FFF;
+    color: #272626;
     height: 75px;
+    font-size: 23px;
     padding-left: 55px;
     padding-right: 35px;
     cursor: pointer;
@@ -140,4 +141,57 @@ html {
     background-image: url('/img/banner.jpg');
   background-size: cover;
   background-attachment: fixed;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-family: "Varela Round", sans-serif;
+}
+.car1{
+    width: 25%;
+    background-color: #484848;
+    margin-top: 10px;
+    margin-right: 5px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.car1 span{
+    padding-inline: 30px;
+}
+#myChart{
+    margin-top: 55px;
+    padding-inline: 30px;
+    padding-bottom: 15px;
+}
+.card2{
+    width: 25%;
+    background-color: #F3F3F3;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+}
+.card3{
+    width: 50%;
+    background-color: #8691E4;
+    margin-top: 10px;
+    margin-left: 5px;
+    border-radius: 10px;
+}
+.footer{
+    height: 10px;
+    width: 100%;
+}
+.meses{
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+.meses span{
+    padding-inline: 23px;
+    color: #949393;
 }
