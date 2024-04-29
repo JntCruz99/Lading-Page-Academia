@@ -9,6 +9,7 @@ body {
 
 html {
     height: 100%;
+    width: 100%;
 }
 
 .corpo {
@@ -150,7 +151,7 @@ html {
     font-family: "Varela Round", sans-serif;
 }
 .car1{
-    width: 25%;
+    width: 30%;
     background-color: #484848;
     margin-top: 10px;
     margin-right: 5px;
@@ -158,23 +159,29 @@ html {
     display: flex;
     flex-direction: column;
 }
-.car1 span{
+.car1 span, .card2 span{
     padding-inline: 30px;
 }
 #myChart{
-    margin-top: 55px;
+    margin-top: 20px;
     padding-inline: 30px;
     padding-bottom: 15px;
 }
 .card2{
-    width: 25%;
+    width: 20%;
     background-color: #F3F3F3;
     margin-top: 10px;
     margin-left: 5px;
     margin-right: 5px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 .card3{
+    display: flex;
+
+    flex-direction: column;
+    padding: 30px;
     width: 50%;
     background-color: #8691E4;
     margin-top: 10px;
@@ -192,6 +199,76 @@ html {
     margin-bottom: 28px;
 }
 .meses span{
-    padding-inline: 23px;
+    padding-inline: 32px;
     color: #949393;
+}
+.card2Buttons a, img{
+    margin-left: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+}
+.card2Buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.topCard3{
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.infoCard3{
+    display: flex;
+    flex-direction: column;
+    color: #F3F3F3;
+}
+.logosCard3{
+    display: flex;
+    flex-direction: column;
+}
+.logosCard3 img{
+    border: solid 1px #ffffff8e;
+    border-radius: 50%;
+    width: 25px;
+    padding: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.logosCard3 img:hover{
+    background-color: #dad3d35d;
+}
+
+.infoCard3{
+    margin-left: 75px;
+}
+.logosCard3{
+    margin-left: 75px;
+}
+.barraDiv{
+    display: flex;
+    justify-content: center;
+
+}
+.barra{
+    margin-top: 35px;
+    margin-bottom: 25px;
+    height: 1px;
+    width: 85%;
+    border-bottom: 1px solid #ffffff8e;
+}
+.footerCard3{
+    display: flex;
+    color: #F3F3F3;
+    justify-content: space-around;
+    align-items: center;
+}
+.footerInfoCard3{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.usersCad3{
+    display: flex;
+    align-items: center;
 }
