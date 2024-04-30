@@ -25,7 +25,9 @@ html {
     justify-content: space-between;
     border-radius: 10px;
     border-bottom-right-radius: 0;
+    animation: navbar 0.5s ease-out;
 }
+
 
 .nav a {
     margin-left: 65px;
@@ -34,6 +36,20 @@ html {
     font-size: 15px;
     font-weight: 500;
     transition: color 0.5s;
+
+}
+
+
+@keyframes navbar {
+    from {
+        opacity: 0;
+        translate: 0 -100vw;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
 }
 
 .nav a:hover {
@@ -50,7 +66,7 @@ html {
     padding-bottom: 15px;
     border-radius: 20px;
     transition: color 0.5s;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     font-weight: 700;
     cursor: pointer;
 }
@@ -63,7 +79,7 @@ html {
     width: 100%;
 }
 
-.logo-novo{
+.logo-novo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,16 +90,19 @@ html {
     background-color: #272626;
     clip-path: polygon(0% 15%, 0 0, 15% 0%, 100% 0, 96% 5%, 94% 11%, 78% 89%, 73% 99%, 71% 100%, 15% 100%, 0 100%, 0% 85%);
 }
-.logo-novo img{
+
+.logo-novo img {
     width: 35%;
     height: 65%;
     cursor: pointer;
 }
-.logo-novo span{
+
+.logo-novo span {
     margin-left: 8px;
     color: white;
 }
-.texto-banner{
+
+.texto-banner {
     font-family: "Open Sans", sans-serif;
     display: flex;
     width: 100%;
@@ -93,10 +112,10 @@ html {
     padding-bottom: 55px;
     flex-direction: column;
     border-radius: 10px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0;
+    overflow: hidden;
 }
-.texto-banner h1{
+
+.texto-banner h1 {
     font-weight: 500;
     letter-spacing: -4px;
     padding: 0;
@@ -105,16 +124,19 @@ html {
     margin: 0;
     margin-top: -45px;
 }
-.texto-banner p{
+
+.texto-banner p {
     width: 41%;
     margin: 0;
 }
-.botao-pai{
+
+.botao-pai {
     display: flex;
     justify-content: end;
     border-bottom-left-radius: 10px;
 }
-.botao{
+
+.botao {
     width: 25%;
     display: flex;
     justify-content: end;
@@ -127,7 +149,7 @@ html {
 
 .botao button {
     width: 100%;
-    background-color:  #c9f15a;
+    background-color: #c9f15a;
     color: #272626;
     height: 75px;
     font-size: 23px;
@@ -138,37 +160,64 @@ html {
     border: none;
     clip-path: polygon(12% 11%, 14% 2%, 17% 0, 85% 0%, 100% 0, 100% 15%, 100% 85%, 100% 100%, 85% 100%, 15% 100%, 0 100%, 0 94%);
 }
-.navBar, .texto-banner, .botao-pai{
+
+.corpo {
     background-image: url('../img/banner.jpg');
     background-size: cover;
-    background-attachment: fixed;
+    z-index: -5;
 }
 
-.cards{
-    display: flex;
-    justify-content: center;
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 2fr;
+    grid-template-rows: 1fr auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
     width: 100%;
     font-family: "Varela Round", sans-serif;
 }
-.car1{
-    width: 30%;
+
+.cardsAnimation {
+    animation: cards 0.8s ease-out;
+}
+
+@keyframes cards {
+    from {
+        opacity: 0;
+        transform: translateY(100vh);
+    }
+
+    to {
+        opacity: 0.7;
+        transform: translateY(0);
+    }
+}
+
+
+.car1 {
+    grid-area: 1 / 1 / 2 / 2;
     background-color: #484848;
     margin-top: 10px;
     margin-right: 5px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
-.car1 span, .card2 span{
+
+.car1 span,
+.card2 span {
     padding-inline: 30px;
 }
-#myChart{
+
+#myChart {
     margin-top: 20px;
     padding-inline: 30px;
     padding-bottom: 15px;
 }
-.card2{
-    width: 20%;
+
+.card2 {
+    grid-area: 1 / 2 / 2 / 3;
     background-color: #F3F3F3;
     margin-top: 10px;
     margin-left: 5px;
@@ -176,57 +225,130 @@ html {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
-.card3{
+
+.definirButton {
+    background-color: #F3F3F3;
+    border: solid 1px #2524248e;
+    border-radius: 20px;
+    padding-inline: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #252424;
+}
+
+
+.ciclismoButton {
+    background-color: #252424;
+    border: solid 1px #25242400;
+    border-radius: 20px;
+    padding-inline: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #F3F3F3;
+}
+
+.logo1Button {
+    width: 28px;
+    border: solid 1px #2524248e;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.fitButton {
+    background-color: #252424;
+    border: solid 1px #2524248e;
+    border-radius: 20px;
+    padding-inline: 26px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #F3F3F3;
+}
+
+.yogButton {
+    background-color: #F3F3F3;
+    border: solid 1px #2524248e;
+    border-radius: 20px;
+    padding-inline: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #252424;
+}
+
+.logo2Button {
+    width: 28px;
+    border: solid 1px #2524248e;
+    background-color: #252424;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.card3 {
+    grid-area: 1 / 3 / 2 / 4;
     display: flex;
     flex-direction: column;
     padding: 30px;
-    width: 50%;
     background-color: #8691E4;
     margin-top: 10px;
     margin-left: 5px;
     border-radius: 10px;
+    overflow: hidden;
 }
-.footer{
+
+.footer {
     height: 10px;
     width: 100%;
 }
-.meses{
+
+.meses {
     font-size: 10px;
     display: flex;
     justify-content: center;
     margin-bottom: 28px;
 }
-.meses span{
-    padding-inline: 32px;
+
+.meses span {
+    padding-inline: 28px;
     color: #949393;
 }
-.card2Buttons a, img{
+
+.card2Buttons a,
+img {
     margin-left: 5px;
     text-decoration: none;
     font-weight: 600;
     font-size: 12px;
 }
-.card2Buttons{
+
+.card2Buttons {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.topCard3{
+
+.card2Buttona {
+    margin-top: 50%;
+}
+
+.topCard3 {
     height: 50%;
     display: flex;
     justify-content: space-around;
 }
-.infoCard3{
+
+.infoCard3 {
     display: flex;
     flex-direction: column;
     color: #F3F3F3;
 }
-.logosCard3{
+
+.logosCard3 {
     display: flex;
     flex-direction: column;
 }
-.logosCard3 img{
+
+.logosCard3 img {
     border: solid 1px #ffffff8e;
     border-radius: 50%;
     width: 25px;
@@ -234,40 +356,157 @@ html {
     margin-top: 10px;
     cursor: pointer;
 }
-.logosCard3 img:hover{
+
+.logosCard3 img:hover {
     background-color: #dad3d35d;
 }
 
-.infoCard3{
-    margin-left: 75px;
-}
-.logosCard3{
-    margin-left: 75px;
-}
-.barraDiv{
+.barraDiv {
     display: flex;
     justify-content: center;
 
 }
-.barra{
+
+.barra {
     margin-top: 35px;
     margin-bottom: 25px;
     height: 1px;
     width: 85%;
     border-bottom: 1px solid #ffffff8e;
 }
-.footerCard3{
+
+.footerCard3 {
     display: flex;
     color: #F3F3F3;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding-inline: 15px;
 }
-.footerInfoCard3{
+
+.footerInfoCard3 {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-.usersCad3{
+
+.usersCad3 {
     display: flex;
     align-items: center;
+}
+
+
+
+@media screen and (max-width: 920px) {
+    .cards {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .card3 {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .texto-banner h1 {
+        color: #c9f15a;
+        font-size: 85px;
+    }
+
+    .botao button {
+        font-size: 20px;
+    }
+
+    .nav a {
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .car1,
+    .card2,
+    .card3 {
+        grid-area: auto;
+    }
+
+    .botao {
+        width: 50%;
+        height: 75px;
+    }
+
+    .botao button {
+        height: auto;
+        font-size: 15px;
+        font-weight: 800;
+        padding-left: 38px;
+        white-space: nowrap;
+    }
+
+    .logo-novo {
+        width: 25%;
+    }
+
+    .logo-novo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .logo-novo span {
+        font-size: 15px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .navBar button {
+        display: none;
+    }
+
+    .texto-banner {
+        align-items: start;
+    }
+
+    .texto-banner h1 {
+        font-size: 75px;
+    }
+
+    .infoCard3 {
+        padding-inline: 10px;
+    }
+
+    .usersCad3 {
+        padding-inline: 28px;
+    }
+
+    .footerCard3 {
+        padding: 0;
+    }
+
+    .card3 {
+        padding: 15px;
+    }
+
+    .card2Buttons {
+        padding: 0;
+        margin: 0;
+    }
+
+    .card2Buttona {
+        margin-top: 15px;
+    }
+
+    .card2Buttonb {
+        margin-bottom: 25px;
+    }
+    .definirButton, .ciclismoButton{
+        width: 30%;
+        text-align: center;
+    }
+    .fitButton, .yogButton{
+        width: 28%;
+        text-align: center;
+    }
 }
